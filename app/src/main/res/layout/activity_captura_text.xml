@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activites.txt.TextActivity">
+
+    <Button
+        android:id="@+id/btnFontSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tamaño"
+        style="@style/buttonPrincipal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+        android:id="@+id/btnStyleNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="N"
+        style="@style/buttonPrincipal"
+        android:textStyle="normal"
+        app:layout_constraintTop_toBottomOf="@+id/btnFontSize"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/btnStyleBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B"
+        android:textStyle="bold"
+        style="@style/buttonPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/btnFontSize"
+        app:layout_constraintLeft_toRightOf="@+id/btnStyleNormal"/>
+
+    <Button
+        android:id="@+id/btnStyleItalic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="i"
+        style="@style/buttonPrincipal"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@+id/btnFontSize"
+        app:layout_constraintLeft_toRightOf="@+id/btnStyleBold"/>
+
+    <Button
+        android:id="@+id/btnStyleBoldItalic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B/I"
+        style="@style/buttonPrincipal"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/btnFontSize"
+        app:layout_constraintLeft_toRightOf="@+id/btnStyleItalic"/>
+
+    <Button
+        android:id="@+id/btnAcceptar"
+        android:text="Acceptar"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        style="@style/buttonPrincipal"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/txtText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnStyleBoldItalic"
+        app:layout_constraintBottom_toTopOf="@+id/btnAcceptar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
